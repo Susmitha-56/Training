@@ -1,0 +1,2 @@
+INSERT INTO SUPPORT VALUES('11223','d.susmithatinu@gmail.com','WINDOWS 2000','NOT FUNCTIONING','MICROSOFT EXCEL');
+INSERT INTO CUSTOMER VALUES('d.susmithatinu@gmail.com','Susmitha','Dhadige',8499878990);

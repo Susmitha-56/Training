@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>regForm</title>
+</head>
+<body>
+<h1 align="center">Customer Registration</h1>
+<hr>
+
+<form action="register" method="post" th:object="${customers}">
+Please Register<br/>
+FirstName: <input type="text" th:field="*{fname}"><br/>
+LastName: <input type="text" th:field="*{lname}"><br/>
+Phone Number: <input type="text" th:field="*{phonenumber}"><br/>
+
+<input type="submit" value="submitRequest">
+
+</form>
+</body>
+</html>

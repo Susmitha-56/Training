@@ -1,0 +1,66 @@
+package com.dbs.project.model;
+
+import java.io.Serializable;
+import java.util.Collection;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table
+@Data
+public class BankAccounts implements Serializable{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	private long acnumber;
+	private double balance;
+	private String branch;
+	private String ifsc;
+	
+	
+	/*
+	 * @ManyToOne(fetch = FetchType.LAZY,optional = false)
+	 * 
+	 * @JoinColumn(name = "custid",nullable = false)
+	 */
+	  
+	  private Customer customer;
+	
+	/*
+	 * @OneToMany(mappedBy = "account", fetch = FetchType.LAZY) private
+	 * Collection<Transactions> transactions;
+	 */
+	
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	
+
+	
+	
+	
+	/*
+	 * public Collection<Transactions> getOperations() { return transactions; }
+	 * 
+	 * public void setOperations(Collection<Transactions> operations) {
+	 * this.transactions = transactions; }
+	 */
+	
+	
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="project"/>
+<aop-project name="bootdemo"/>
+<aop-project name="dbdemo"/>
+<aop-project name="spring-mvc-application-master"/>
+<aop-project name="student"/>
+<aop-project name="spring-mvc-app"/>
+<aop-project name="twitterapp"/>
+<aop-project name="boot-ass3"/>
+<aop-project name="support-system"/>
+<aop-project name="DBDemoTechnialAssignment"/>
+<aop-project name="webdemo"/>
+<aop-project name="InternetBanking"/>
+<aop-project name="bootdemo2"/>
+<aop-project name="dbs-employee-crud"/>
+</aop-reference-model>

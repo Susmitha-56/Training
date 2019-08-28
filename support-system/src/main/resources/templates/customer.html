@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Customer Registration</title>
+</head>
+<body>
+<div class="container">
+	<h1 class="page-header">Customer Registration</h1>
+	<form action="register/" style="align-items: center;" method="post" th:object="${customer}">
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Email Id:</label> 
+				<input class="form-control"  type="email" name="email" th:field="*{email}" placeholder="Enter email-ID" /><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span> 
+			</div>
+			<div class="col-md-6 form-group">
+				<label>First Name:</label> 
+				<input class="form-control"  type="text" name="firstName" th:field="*{firstName}" placeholder="Enter First Name" /><span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+					<label>Last Name</label>
+				<input class="form-control"  type="text" name="lastName" th:field="*{lastName}" placeholder="Enter Last Name" /> <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 form-group">
+			<label>Mobile No.</label> 
+			<input class="form-control"  type="text" name="mobileNumber" th:field="*{mobile}" placeholder="Enter Mobile Number"/ ><span th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="col-md-6">
+		<button class="btn btn-primary">Register</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>

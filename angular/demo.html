@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ 
+</head>
+<body>
+    <h3>LOGIN FORM</h3>
+        <form action>
+       
+                <div class="container">
+                  <label for="uname"><b>Username</b></label><br>
+                  <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+                  <br>
+              
+                  <label for="psw"><b>Password</b></label><br>
+                  <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                  <br>
+              
+                  <input type="submit" class="btn btn-primary" value="Submit" onClick=val()>
+                  <button type="reset" class="btn btn-danger">Reset</button>
+                 
+                </div> 
+        </form>
+</body>
+<script>
+
+function val()
+    {
+       if(document.getElementById("uname").value == "xyz"
+       && document.getElementById("psw").value == "xyz") {
+    
+       }
+       else {
+        alert("Username or Password is incorrect");
+       }
+    }
+
+    document.querySelector("#submit").addEventListener('click',function(event))
+    {
+        
+    }
+</script>
+</html>

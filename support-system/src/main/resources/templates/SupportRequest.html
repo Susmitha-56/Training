@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Support-Request</title>
+</head>
+<body>
+<div class="container">
+<h1 class="page-header">Technical Support Request</h1>
+	<form action="request/" method="post" th:object="${supportRequest}">
+		<div class="row">
+			<div class="col-md-6 form-group">
+			<label>Email Id:</label>
+			<input class="form-control"  type="text" name="email" th:field="*{email}"  />  <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 form-group">
+				<label>Software</label>
+				<select class="form-control"  name="software" required>
+				  <option value="Microsoft Word">Microsoft Word</option>
+				  <option value="Spring Boot">Spring Boot</option>
+				  <option value="Eclipse">Eclipse</option>
+				  <option value="Asphalt 8">Asphalt 8</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Operating System</label>
+				<select class="form-control" name="OS" required>
+				  <option value="Ubuntu">Ubuntu</option>
+				  <option value="Fedora">Fedora</option>
+				  <option value="Windows 10">Windows 10</option>
+				  <option value="IOS">IOS</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Description : </label>
+				<textarea class="form-control"  rows="10" cols="100" name="problem" th:field="*{problem}"></textarea><span th:if="${#fields.hasErrors('problem')}" th:errors="*{problem}" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<button class="btn btn-primary" type="submit">Submit Request</button>
+			</div>
+		</div>	
+	</form>
+</div>
+</body>
+</html>

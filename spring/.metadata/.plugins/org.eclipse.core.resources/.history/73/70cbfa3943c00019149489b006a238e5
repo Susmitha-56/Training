@@ -1,0 +1,49 @@
+package com.dbs.project.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.project.model.BankAccounts;
+import com.dbs.project.repository.AccountsRepository;
+
+@Service
+public class BankAccountsServiceImpl implements BankAccountsService{
+
+	@Autowired
+	private AccountsRepository accountRepository;
+	
+    @Autowired
+	public BankAccountsServiceImpl(AccountsRepository accountRepository) {
+    	super();
+		this.accountRepository = accountRepository;
+	}
+	@Override
+	public List<BankAccounts> listAll() {
+		return this.accountRepository.findAll();
+	}
+
+	@Override
+	public BankAccounts saveAccount(BankAccounts account) {
+		return this.accountRepository.save(account);
+	}
+
+	@Override
+	public BankAccounts findById(long id) {
+		return this.accountRepository.findById(id).get();
+	}
+
+	@Override
+	public BankAccounts updateAccount(long id, BankAccounts account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAccount(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

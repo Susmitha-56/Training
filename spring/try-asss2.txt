@@ -1,0 +1,74 @@
+package com.demo.ass2;
+
+import java.util.Scanner;
+
+public class menu
+{
+
+	do
+	{
+		System.out.println("*******Menu********");
+		System.out.println(".....Enter your option........");
+		System.out.println("1 => Create");
+		System.out.println("2 => Display");
+		System.out.println("3 => Riase salary");
+		System.out.println("4 => Exit");
+		System.out.println("********************");
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		switch(x)
+        	{
+           		 case 1:
+            			create();
+				break;
+        		
+           		 case 2:
+           			 System.out.println("Display the details ");
+			         break;
+            		 case 3:
+            			raise_sal();
+				break;
+
+           		 case 4:
+           			 System.exit(0);
+				 break;
+
+            		default:
+            			System.out.println("Invalid Choice");
+           		break;
+        	 }
+		
+		
+	}while(x!=4);
+}
+void create()
+{	
+
+			System.out.println(".....Enter your option........");
+        		System.out.println("1 => Clerk");
+        		System.out.println("2 => Programmer");
+        		System.out.println("3 => Manager");
+        		System.out.println("4 => Exit");
+        		System.out.println("********************");
+			Scanner sc1=new Scanner(System.in);
+        		int x1=sc1.nextInt();
+			switch(x1)
+        		{
+        		case 1:
+        			Employee e1=(Employee)context.getBean("clerk");
+        			
+        		case 2:
+        			Employee e2=(Employee)context.getBean("prg");
+        			 break;
+        		case 3:
+        			  Employee e3=(Employee)context.getBean("manager");
+        			  break;
+        		case 4:
+        	            System.exit(0);
+
+        	     	default:
+        	            System.out.println("Invalid Choice");
+        	            break;
+        		}
+
+}

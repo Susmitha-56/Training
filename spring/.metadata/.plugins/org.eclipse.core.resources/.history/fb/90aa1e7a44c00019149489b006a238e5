@@ -1,0 +1,65 @@
+package com.dbs.project.model;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+@Data
+@Entity
+@Table
+public class Customer implements Serializable, Comparable<Customer> {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long cid;
+
+	@Column(name = "customerName", nullable = false)
+	private String name;
+
+	@Column(name = "userName", nullable = false)
+	private String userName;
+
+	@Column(name = "password", nullable = false)
+	private String password;
+
+	@Column(name = "pan", nullable = false)
+	private String PAN;
+
+	@Column(name = "phoneNo", nullable = false)
+	private int phoneNo;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	private Address address;
+
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<BankAccounts> bankAccountsSet = new HashSet<>();
+
+	@ManyToOne
+	@JoinColumn(name = "empid", nullable = false)
+	private Bank bank;
+
+	public Customer(String name, String userName, String password, String PAN, int phoneNo) {
+		this.name = name;
+		this.userName = userName;
+		this.password = password;
+		this.PAN = PAN;
+		this.phoneNo = phoneNo;
+	}
+
+	public Bank getBank() {
+		return bank;
+	}
+
+	public void setBank(Bank bank) {
+		this.bank = bank;
+	}
+
+	@Override
+	public int compareTo(Customer customer) {
+		return (int) (this.cid - customer.cid);
+	}
+}

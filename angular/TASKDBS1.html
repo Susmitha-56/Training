@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            input {
+                width: 300px;
+            }
+            div {
+                margin-top: 10px;
+            }
+            .btn-primary {
+                margin: 10px;
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div id="myForm" class="col-md-6"> 
+                    <label>ID:</label>  <input type="number"  placeholder="Enter ID"  class="form-control" id="id" required/>
+                    <label>TASK:</label>  <input type="text"placeholder="Enter TASK"  class="form-control" id="task" required/>
+                    <label>DES:</label>  <input type="text" placeholder="Enter DES"  class="form-control" id="des" required/>
+                    <button class="btn btn-primary" id="submit"> ADD</button>
+                </div>
+            </div>
+            <div class="row">    
+                <div id="divId" class="md-col-6">
+
+                </div>
+            </div>
+        </div>
+        <script>
+                let data = [];
+                let liString = '';
+                displayData({});
+                function displayData(newTodo) {
+                    liString = '';
+                    var ulElement = document.getElementById('divId');
+                    if(data.length === 0) {
+                        liString = '<h4> There are no TODOs </h4>';
+                    } else {
+                        data.forEach(function(todo) {
+                            var dataString = '<div class="col-md-2">'+ todo.id + '</div>'
+                                            + '<div class="col-md-2">'+ todo.task + '</div>'
+                                            + '<div class="col-md-2">'+ todo.des + '</div>';
+                            liString   = liString +  '<div class="row">' + dataString + '<button class="btn btn-danger"onClick= deleteThis(' 
+                                                + todo.id + ')>delete</button></div></div>';
+                        })
+                    }
+                    ulElement.innerHTML   = liString;
+                }
+                function deleteThis(todoId) {
+                    let newArray = [];
+                    for(let i= 0; i<data.length;i++) {
+                        let temp = data[i].id;
+                        console.log(temp);
+                        if(data[i].id != todoId) {
+                            newArray.push(data[i]);
+                        }
+                    }
+                    data = newArray;
+                    displayData({});
+                }
+                function storeData() {
+                    let id = document.getElementById('id');
+                    let task = document.getElementById('task');
+                    let des = document.getElementById('des');
+                    let todoObject = {'id': id.value, 'task':task.value, 'des':des.value};
+                    id.value = ''; task.value = ''; des.value ='';
+                    data.push(todoObject);
+                    displayData(todoObject);
+                }
+                document.getElementById('submit').addEventListener('click', storeData);
+            </script>
+    </body>
+</html>

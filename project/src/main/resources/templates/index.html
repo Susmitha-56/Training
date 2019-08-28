@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+<h1 align="center">Technical Support Request</h1>
+<hr>
+
+<form action="register" method="post" th:object="${support}">
+<div>
+Email: <input type="text" th:field="*{email}"><br/>
+</div>
+
+<div>
+Software: <input type="text" th:field="*{software}">
+ 
+Operating System: <input type="text" th:field="*{os}"><br/>
+</div>
+  <p>
+          <label th:field="*{problem}">Problem Description</label>
+          <textarea rows="3" cols="70" name="pd"> </textarea>
+        </p><br/>
+<hr>
+<input type="submit" value="SubmitRequest">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        #xyz{
+    
+                width:400px;
+                height:500px;
+                background-color:aqua;    
+        }
+        </style>
+</head>
+<body>
+    <div id="xyz">
+
+
+    </div>
+    <input id="sub" type="submit" value="START" onclick="timer( )">
+    <input id="res" type="reset" value="RESET" onclick="myStopFunction()">
+</body>
+<script>
+
+
+
+var myVar;
+
+function timer() {
+  myVar = setInterval(function(){ alertFunc("First parameter", "Second parameter"); }, 2000);
+}
+var num=0;
+function alertFunc(param1, param2) {
+
+  document.getElementById("xyz").innerHTML = num++;
+
+}
+
+function myStopFunction() {
+num=0;
+document.getElementById("xyz").innerHTML = num;
+  clearInterval(myVar);
+}
+</script>
+
+</html>

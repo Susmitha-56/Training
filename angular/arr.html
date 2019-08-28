@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow functions gone wrong</title>
+    <style>
+    
+    #container{
+
+            width:400px;
+            height:500px;
+            background-color: red;
+
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="click">Click Me!!!!!</button>
+    </div>
+</body>
+<script>
+document.querySelector('#container').addEventListener('click',function()
+{
+    console.log(this);
+    console.log('div is clicked');
+})
+</script>
+</html>

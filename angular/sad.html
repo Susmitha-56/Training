@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .list-item{
+        margin: 10px;
+        padding: 10px;
+        color:aliceblue;
+        font-size: 24px;
+        background-color: aqua;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        Search:<input type="text" id="username" name="username" >
+        <ul id="users">
+
+        </ul>
+    </div>
+</body>
+<script>
+    let names=[];
+    
+    document.querySelector("#username").addEventListener("keyup",function(event){
+        console.log('name')
+     let names=users.filter(user=>user.name.startsWith(event.target.value))
+     .map(user=>`<li class="list-item">${user.name}</li>`)
+     .join('');
+     document.querySelector('#users').innerHTML=names;
+
+    
+})
+    
+    
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response=>response.json())
+    .then(data=>{
+        users=data
+         let names=data
+            .map(user=>`<li class='list-item'>${user.name}</li>`).join('');
+            document.querySelector("#users").innerHTML=names;
+    })
+
+
+    /*function myFunction() {
+       // alert("Heyyy");
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("users");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}*/
+</script>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Abridge\Desktop\spring\dbs-employee-crud\src\main\java\com\dbs\emp_mgmt\controller"/>
+			<item value="C:\Users\Abridge\Desktop\moviesapp"/>
+			<item value="C:\Users\Abridge\Desktop\spring\empMgmt"/>
+			<item value="C:\Users\Abridge\Desktop\spring\annotatedemo\src\main\java\com\demo\annotatedemo"/>
+			<item value="C:\Users\Abridge\Desktop\spring\boot-ass3"/>
+			<item value="C:\Users\Abridge\Desktop\spring\springdemo\src\main\java\beans.xml"/>
+			<item value="C:\Users\Abridge\Desktop\spring\ass1\src\main\java\com\demo\ass1\App.java"/>
+			<item value="C:\Users\Abridge\Desktop\spring\springdemo\src\main\java\com\demo\springdemo\App.java"/>
+			<item value="C:\Users\Abridge\Desktop\spring\Demo\src\com\Person.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Abridge\Desktop\Project-Dbs\InternetBanking"/>
+			<item value="C:\Users\Abridge\Desktop\dummy-ib"/>
+			<item value="C:\Users\Abridge\Desktop\spring\InternetBanking"/>
+			<item value="C:\Users\Abridge\Desktop\project"/>
+			<item value="C:\Users\Abridge\Desktop\Project"/>
+			<item value="C:\Users\Abridge\Desktop\support-system"/>
+			<item value="C:\Users\Abridge\Desktop\spring-mvc-basic"/>
+			<item value="C:\Users\Abridge\Desktop\login validation"/>
+			<item value="C:\Users\Abridge\Desktop\spring\spring-mvc-application-master"/>
+			<item value="C:\Users\Abridge\Desktop\spring\Spring-mvc-demo-master"/>
+			<item value="C:\Users\Abridge\Desktop\spring\spring-mvc-application-master1"/>
+			<item value="C:\Users\Abridge\Desktop\spring\spring-mvc-application-masterr"/>
+			<item value="C:\Users\Abridge\Downloads\DBDemoTechnialAssignment-20190805T162514Z-001"/>
+			<item value="C:\Users\Abridge\Desktop\spring\dbs-employee-crud"/>
+			<item value="C:\Users\Abridge\Desktop\spring\bootdemo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
